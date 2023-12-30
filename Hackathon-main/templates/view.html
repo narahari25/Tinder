@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data View</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Bio</th>
+            <th>Photo</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td>{{ user[3] }}</td>
+            <td><img src="{{ user[4] }}" alt="{{ user[1] }}'s photo"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

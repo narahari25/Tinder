@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: transparent;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  .main-content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  
+  .bodyh{
+  background-image: url('https://thumbs.dreamstime.com/b/roommate-blue-neon-announcement-signboard-roommate-blue-neon-announcement-signboard-244985893.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  
+  }
+  .homeh1{
+  font-size: 100px;
+  padding-left: 200px;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+  font-size: 200px;
+  }
+  .homeh2{
+  font-size: 70px;
+  text-align: center;
+  padding-left: 100px;
+  color:tomato;
+  }

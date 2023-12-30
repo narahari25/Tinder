@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tinder swipe cards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="../static/styles/style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="tinder">now i want you to make changes such that cards that we swiping left and right will have data from
+    our database
+    <div class="tinder--status">
+      <i class="fa fa-remove"></i>
+      <i class="fa fa-heart"></i>
+    </div>
+
+    <div class="tinder--cards">
+      {% for user in users %}
+
+      <div class="tinder--card">
+        <img src="data:image/jpg;base64,{{ user.photo }}">
+        <h3>{{user.name}}</h3>
+        <p>This is a demo for Tinder like swipe cards</p>
+        <div class="tinder--buttons">
+          <form method="POST" action="/swipe_left?name={{user.name}}&user=rohan">
+            <!-- <div class="tinder--buttons"> -->
+            <!-- <button type="submit" name="swipe_direction" value="left"><i class="fa fa-remove"></i></button> -->
+  
+            <button id="nope"  name="swipe_direction" value="left"><i class="fa fa-remove"></i></button>
+  
+          </form>
+          <!-- <div class="tinder--buttons"> -->
+  
+          <form method="POST" action="/swipe_right?name={{user.name}}&user=rohan">
+            <button id="nope" name="swipe_direction" value="right"><i class="fa fa-heart"></i></button>
+  
+  
+          </form>
+        </div>
+      </div>
+
+
+      
+      {% endfor %}
+    </div>
+    <!-- partial -->
+    <script src='https://hammerjs.github.io/dist/hammer.min.js'></script>
+    <script src="../static/styles/script.js"></script>
+
+</body>
+
+</html>
